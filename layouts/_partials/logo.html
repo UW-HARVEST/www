@@ -1,0 +1,9 @@
+{{- with resources.Get "imgs/logo.png" }}
+{{- if hugo.IsDevelopment }}
+    <img src="{{ .RelPermalink }}"/>
+{{- else }}
+    {{- with . | fingerprint }}
+    <img src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+    {{- end }}
+{{- end }}
+{{- end }}

@@ -1,0 +1,99 @@
+html {
+    font-size: 18px;
+}
+
+body {
+  color: #222;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+  margin: 1rem auto;
+  max-width: 1024px;
+}
+
+h1, h2 {
+    font-family: "Raleway", sans-serif;
+}
+
+header {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr fit-content 1fr;
+  grid-template-areas: "logo name empty";
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 5rem;
+  grid-area: name;
+  width: fit-content;
+}
+
+header img {
+  grid-area: logo;
+  display: block;
+  height: 100%;
+  object-position: 38px 0;
+  text-align: right;
+  margin: auto auto;
+}
+
+main h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+main h2.list + ul {
+    list-style: none;
+    padding: 0;
+}
+
+main h2.institutions + ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    height: 6rem;
+    width: 66%;
+    margin: 0 auto;
+}
+
+main h2.institutions + ul img {
+    height: 100%;
+}
+
+main h2.pis + ul li {
+    display: inline;
+}
+
+main h2.pis + ul li::after {
+    content: ', ';
+}
+
+main h2.pis + ul li:nth-last-child(2)::after {
+    content: '';
+}
+
+main h2.pis + ul li:last-child::before {
+    content: 'and ';
+}
+
+main h2.pis + ul li:last-child::after {
+    content: '';
+}
+
+main h2.pis + * {
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+
+footer {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: #00e;
+  text-decoration: none;
+}
