@@ -7,8 +7,8 @@ title: Hello
 
 
 ## { .list .institutions }
-* [![University of Washington](/imgs/uw-logo.png "University of Washington")](https://www.cs.washington.edu)
-* [![Better Bytes](/imgs/better-bytes-logo.svg "Better Bytes")](https://betterbytes.org)
+* [{{< image "/imgs/uw-logo.png" "University of Washington" >}}](https://www.cs.washington.edu)
+* [{{< image "/imgs/better-bytes-logo.svg" "Better Bytes" >}}](https://betterbytes.org)
 
 ## { .list .pis }
 * Tom Anderson

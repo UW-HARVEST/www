@@ -1,0 +1,11 @@
+{{- $img := index .Params 0 }}
+{{- $title := index .Params 1 }}
+{{- with resources.Get $img }}
+{{- if hugo.IsDevelopment }}
+    <img src="{{ .RelPermalink }}" title="{{ $title }}" alt="{{ $title }}"/>
+{{- else }}
+    {{- with . | fingerprint }}
+    <img src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" title="{{ $title }}" alt="{{ $title }}"/>
+    {{- end }}
+{{- end }}
+{{- end }}
